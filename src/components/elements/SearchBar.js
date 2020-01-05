@@ -6,6 +6,20 @@ import {
   StyledSearchBarContent 
 } from '../styles/StyledSearchBar';
 
-const SearchBar = () => <div>SearchBar</div>
+const SearchBar = () => {
+  return (
+    <StyledSearchBar>
+      <StyledSearchBarContent>
+        <FontAwesome className='fa-search' name='search' size='2x' />
+        <input
+          tyoe='text'
+          placeholder="Search Movie"
+          onChange={doSearch}
+          value={state}
+        />
+      </StyledSearchBarContent>
+    </StyledSearchBar>
+  )
+}
 
 export default SearchBar;
